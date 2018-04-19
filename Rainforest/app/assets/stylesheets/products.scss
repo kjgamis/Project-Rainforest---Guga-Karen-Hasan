@@ -1,3 +1,58 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.navbar {
+  grid-area: navbar;
+  justify-self: end;
+  align-self: center;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #ccc;
+  transition: 0.5s;
+}
+
+img {
+  width: 100%;
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "logo navbar"
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 30% 60% 10%;
+  grid-template-areas:
+  "header"
+  "wrapper"
+  "footer"
+}
+
+.wrapper {
+  display: grid;
+  grid-area: wrapper;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: .25em;
+}
+
+footer {
+  grid-area: footer;
+}

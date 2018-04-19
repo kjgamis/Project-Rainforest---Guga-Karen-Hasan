@@ -1,7 +1,9 @@
-<h2><%= link_to "Name: #{ product.name }", product_path(product) %></h2>
-<%= link_to(image_tag(product.url), product_path(product)) %>
-<p>
-  Description: <%= product.description %>
-  <br>
-  Price: <%= product.price_in_cents %> Cents
-</p>
+<div class="single">
+  <%= link_to(image_tag(product.url), product_path(product)) %>
+  <h2><%= link_to "Name: #{ product.name }", product_path(product) %></h2>
+  <p>
+    Description: <%= product.description %>
+    <br>
+    Price: <%= product.price_in_cents %> Cents
+  </p>
+</div>
