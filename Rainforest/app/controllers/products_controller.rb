@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
 
     @product = Product.new
 
+
   end
 
   def edit
@@ -23,6 +24,7 @@ class ProductsController < ApplicationController
     # we find the instance of thhe product using params[:id] store it in a variable to be used in the view
 
     @product = Product.find(params[:id])
+    @review = Review.new
 
   end
 
