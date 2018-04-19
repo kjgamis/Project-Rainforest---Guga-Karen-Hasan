@@ -8,6 +8,8 @@ class ProductsController < ApplicationController
 
   def new
 
+    @product = Product.new
+
   end
 
   def edit
@@ -16,6 +18,10 @@ class ProductsController < ApplicationController
 
   def show
 
+    # we find the instance of thhe product using params[:id] store it in a variable to be used in the view
+
+    @product = Product.find(params[:id])
+
   end
 
   def update
@@ -23,6 +29,16 @@ class ProductsController < ApplicationController
   end
 
   def create
+
+    @product = Product.new
+
+    @product.name = params[:product][:name]
+    @product.description = params[:product][:description]
+    @product.price_in_cents = params[:product][:price_in_cents]
+
+    @product.save
+
+    redirect_to product_url(@product.id)
 
   end
 
