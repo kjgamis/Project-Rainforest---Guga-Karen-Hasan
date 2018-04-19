@@ -1,0 +1,14 @@
+<h1>All our products will go</h1>
+
+<% @products.each do |product| %>
+
+
+    <h2>Name: <%= product.name %></h2>
+    <p>
+      Description: <%= product.description %>
+      <br>
+      Price: <%= product.price_in_cents %> Cents
+    </p>
+
+
+<% end %>

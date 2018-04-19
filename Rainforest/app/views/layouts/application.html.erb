@@ -9,6 +9,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header>
+    <nav>
+      <a><%= link_to 'Home', root_path %></a>
+      <a><%= link_to 'Products', products_path %></a>
+      <a><%= link_to 'New Products', new_product_path %></a>
+    </nav>
+  </header>
   <body>
     <%= yield %>
   </body>
