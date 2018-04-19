@@ -36,9 +36,11 @@ class ProductsController < ApplicationController
     @product.description = params[:product][:description]
     @product.price_in_cents = params[:product][:price_in_cents]
 
-    @product.save
-
-    redirect_to product_url(@product.id)
+    if @product.save
+      redirect_to product_url(@product.id)
+    else
+      redirect_to product_path
+    end
 
   end
 
@@ -50,9 +52,11 @@ class ProductsController < ApplicationController
     @product.description = params[:product][:description]
     @product.price_in_cents = params[:product][:price_in_cents]
 
-    @product.save
-
-    redirect_to product_url(@product.id)
+    if @product.save
+      redirect_to product_url(@product.id)
+    else
+      redirect_to new_product_path
+    end
 
   end
 
