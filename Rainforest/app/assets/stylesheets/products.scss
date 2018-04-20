@@ -1,34 +1,47 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Helvetica, sans-serif;
+  margin: 0;
 }
 
-.logo {
+.logo > a {
+  color: #e4c43c;
+  font-family: 'Armata', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
   grid-area: logo;
+  padding: 20px;
 }
-
+a {
+  text-decoration: none;
+}
 .navbar {
   grid-area: navbar;
   justify-self: end;
   align-self: center;
-}
-a {
-  text-decoration: none;
-  color: #000;
+  padding: 1.5em;
 }
 
-a:hover {
+.navbar > a {
   color: #ccc;
+  font-size: 1.2em;
+  margin-right: 0.5em;
+  text-decoration: none;
+}
+
+.navbar > a:hover {
+  color: #aaa;
   transition: 0.5s;
 }
 
-img {
-  width: 100%;
-}
-
 .header {
+  background: #006c0b;
   grid-area: header;
   display: grid;
   grid-template-columns: 50% 50%;
@@ -39,7 +52,7 @@ img {
 .container {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 30% 60% 10%;
+  grid-template-rows: 20% 70% 10%;
   grid-template-areas:
   "header"
   "wrapper"
@@ -49,10 +62,30 @@ img {
 .wrapper {
   display: grid;
   grid-area: wrapper;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 50% 50%;
   grid-gap: .25em;
+  padding: 2em;
+}
+
+.links {
+  margin: 2em;
+}
+
+.picture {
+  padding: 6em;
+}
+
+img {
+  width: 100%;
+}
+
+.text {
+  margin: 2em;
 }
 
 footer {
+  background: #ccc;
+  color: #fff;
   grid-area: footer;
+  text-align: center;
 }

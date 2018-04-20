@@ -1,27 +1,30 @@
-<h1>Product Clicked</h1>
+<div class="individual">
+  <%= render "product_individual", product: @product %>
 
-<%= render "product_individual", product: @product %>
+  <div class="links">
+    <%= link_to "Edit", edit_product_path %> |
 
-<%= link_to "Edit", edit_product_path %> |
+    <%= link_to "Delete", product_url(@product), method: :delete, data: {confirm: "Are you sure you want to delete this product #{ @product.name }?"} %>
+  </div>
 
-<%= link_to "Delete", product_url(@product), method: :delete, data: {confirm: "Are you sure you want to delete this product #{ @product.name }?"} %>
 
 
-<!-- First we will find the review for the product -->
-<!--  Display the review (review description)  we will show the timestamp-->
-<!--  have a form to add review we make sure the product_id is the same as params[:id] -->
+  <!-- First we will find the review for the product -->
+  <!--  Display the review (review description)  we will show the timestamp-->
+  <!--  have a form to add review we make sure the product_id is the same as params[:id] -->
 
-<% @product.reviews.each do |review| %>
+  <% @product.reviews.each do |review| %>
 
-  <ul>
-    <li><%= review.description %>
-      <br>
-      <%= review.created_at.asctime %>
-      <br>
-      <%= link_to 'Edit', edit_product_review_path(@product.id,review) %> |
-      <%= link_to "Delete", product_review_url(@product.id, review), method: :delete, data: {confirm: "Are you sure you want to delete \"#{ review.description }\"?"} %>
-    </li>
-  </ul>
+    <ul>
+      <li><%= review.description %>
+        <br>
+        <%= review.created_at.asctime %>
+        <br>
+        <%= link_to 'Edit', edit_product_review_path(@product.id,review) %> |
+        <%= link_to "Delete", product_review_url(@product.id, review), method: :delete, data: {confirm: "Are you sure you want to delete \"#{ review.description }\"?"} %>
+      </li>
+    </ul>
 
-<% end %>
-<%=  render 'review' ,locals:{ review: @review , product_id: @product.id } %>
+  <% end %>
+  <%=  render 'review' ,locals:{ review: @review , product_id: @product.id } %>
+</div>

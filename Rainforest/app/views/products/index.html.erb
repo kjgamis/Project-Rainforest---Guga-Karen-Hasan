@@ -1,8 +1,10 @@
-<% @products.each do |product| %>
+<section class="wrapper">
+  <% @products.each do |product| %>
 
 
 
-  <%= render "product_individual", product: product %>
+    <%= render "product_individual", product: product %>
 
 
-<% end %>
+  <% end %>
+</section>
