@@ -2,9 +2,9 @@
   <% @products.each do |product| %>
 
 
-
-    <%= render "product_individual", product: product %>
-
+    <div class="single">
+      <%= render "product_individual", product: product %>
+    </div>
 
   <% end %>
 </section>

@@ -65,23 +65,15 @@ a {
   grid-template-columns: 50% 50%;
   grid-gap: .25em;
   padding: 2em;
+  // grid-template-areas:
+    // "single single"
 }
 
-.links {
-  margin: 2em;
-}
-
-.picture {
-  padding: 6em;
-}
 
 img {
   width: 100%;
 }
 
-.text {
-  margin: 2em;
-}
 
 footer {
   background: #ccc;
