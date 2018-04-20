@@ -90,12 +90,13 @@ a {
   padding: 2em;
   .links {
     position: relative;
-    left: 400px;
+    left: 40%;
   }
 }
 
-.new {
+.new, .edit {
   margin: 20px;
+  text-align: center;
   h1 {
     font-size: 2.5em;
     font-weight: 300;
@@ -108,8 +109,7 @@ a {
   input {
     border: solid 1px #ccc;
     border-radius: 5px;
-    paddin: 0 10px;
-    width: 200px
+    width: 200px;
   }
   // input:nth-last-child(1) {
     // background: #333;
@@ -119,7 +119,7 @@ a {
     margin: 0;
   }
   h4:nth-child(even) {
-    margin: 0 0 1em 0;
+    margin: 0.5em 0;
   }
   h4:nth-last-child(1) {
     input {
