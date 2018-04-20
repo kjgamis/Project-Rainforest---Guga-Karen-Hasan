@@ -3,10 +3,10 @@
 </div>
 
 <div class="text">
-  <h2><%= link_to "Name: #{ product.name }", product_path(product) %></h2>
-  <p>
+  <%= link_to "#{ product.name }", product_path(product) %>
+  <h3 class="description">
     Description: <%= product.description %>
     <br>
     Price: <%= product.price_in_cents %> Cents
-  </p>
+  </h3>
 </div>
