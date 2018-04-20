@@ -1,22 +1,18 @@
 <%= form_for product do |f|  %>
 
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </p>
-  <p>
-    <%= f.label :price_in_cents %>
-    <%= f.text_field :price_in_cents %>
-  </p>
-  <p>
-    <%= f.label :url %>
-    <%= f.text_field :url %>
-  </p>
-    <%= f.submit %>
+    <h4><%= f.label :name %></h4>
+    <h4><%= f.text_field :name %></h4>
+
+    <h4><%= f.label :description %></h4>
+    <h4><%= f.text_field :description %></h4>
+
+    <h4><%= f.label :price_in_cents %></h4>
+    <h4><%= f.text_field :price_in_cents %></h4>
+
+    <h4><%= f.label :url %></h4>
+    <h4><%= f.text_field :url %></h4>
+
+    <h4><%= f.submit %>
 
 <% end %>
 
