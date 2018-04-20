@@ -103,6 +103,21 @@ a {
   }
 }
 
+// validation
+
+#error_explanation {
+  h2 {
+    font-weight: 300;
+    margin: 20px 0 0 0;
+  }
+  ul {
+    color: #7d0000;
+    font-size: 1em;
+    list-style: none;
+    margin: 0;
+  }
+}
+
 // product form
 
 .form {
@@ -174,7 +189,7 @@ a {
   }
 }
 
-
+// footer
 
 footer {
   background: #ccc;
